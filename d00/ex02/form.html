@@ -1,17 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <form>
-        Firstname : <input type="text" name="firstname"><br>
-        Name : <input type="text" name="name"><br>
-        Age : <input type="number" name="age"><br>
-        Phone : <input type="tel" name="phone"><br>
-        Email : <input type="email" name="email"><br>
-        Student at 42? :
-    </form>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Data sending form</title>
+        <script src="popup.js"></script>
+    </head>
+    <body>
+        <form onsubmit="return false;">
+            <div>
+                <label for="firstname">Firstname : </label>
+                <input id="firstname" type="text" name="firstname" required>
+            </div>
+            <div>
+                <label for="name">Name : </label>
+                <input id="name" type="text" name="name" required>
+            </div>
+            <div>
+                <label for="age">Age : </label>
+                <input id="age" type="number" name="age" required>
+            </div>
+            <div>
+                <label for="phone">Phone : </label>
+                <input id="phone" type="tel" name="phone" required>
+            </div>
+            <div>
+                <label for="email">Email : </label>
+                <input id="email" type="email" name="email" required>
+            </div>
+            <div>
+                <label for="student">Student at 42? : </label>
+                <input id="student" type="checkbox" name="student">
+            </div>
+            <div>
+                <label for="gender_male">Male </label>
+                <input id="gender_male" type="radio" name="gender" value="Male" checked>
+                <label for="gender_female">Female </label>
+                <input id="gender_female" type="radio" name="gender" value="Female">
+                <label for="gender_other">Other </label>
+                <input id="gender_other" type="radio" name="gender" value="Other">
+            </div>
+            <button type="submit" onclick="displayFormContents()">
+                Run that sexy JavaScript!
+            </button>
+        </form>
+    </body>
 </html>
